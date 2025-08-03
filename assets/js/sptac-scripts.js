@@ -62,8 +62,8 @@ jQuery(document).ready(function($) {
     // Function to load products
     function loadProducts(category, search, page) {
         console.log('SPTAC: Loading products', { category, search, page });
-        // Show loading
-        $('.sptac-products').html('<p>' + sptac_ajax.i18n.loading + '</p>');
+        // Show loading spinner
+        $('.sptac-products').html('<div class="sptac-loading-spinner"></div>');
         
         // Get products per page from data attribute
         var productsPerPage = $('.sptac-container').data('products-per-page') || 12;
