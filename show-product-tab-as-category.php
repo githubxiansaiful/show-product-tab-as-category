@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Show Product Tab as Category
- * Plugin URI: https://wordpress.org/plugins/search/show-product-tab-as-category/
+ * Plugin URI: https://wordpress.org/plugins/show-product-tab-as-category
  * Description: A WooCommerce plugin to display products in a tabbed interface based on categories with search, pagination, and admin settings.
- * Version: 1.6.1
+ * Version: 1.6.2
  * Author: Xian Saiful
  * Author URI: https://xiansaiful.com
  * License: GPL-2.0-or-later
@@ -118,7 +118,7 @@ class Show_Product_Tab_As_Category {
 				'sptac-scripts',
 				plugin_dir_url(__FILE__) . 'assets/js/sptac-scripts.js',
 				['jquery'],
-				'1.2',
+				'1.2.1',
 				true
 			);
 			
@@ -434,7 +434,10 @@ class Show_Product_Tab_As_Category {
 	 * AJAX handler for loading products.
 	 */
 	public function ajax_load_products() {
-		check_ajax_referer('sptac_nonce', 'nonce');
+		// Verify nonce
+		if (!check_ajax_referer('sptac_nonce', 'nonce', false)) {
+			wp_send_json_error(['message' => __('Invalid nonce.', 'show-product-tab-as-category')]);
+		}
 
 		$category = isset($_POST['category']) ? sanitize_text_field(wp_unslash($_POST['category'])) : 'all';
 		$search = isset($_POST['search']) ? sanitize_text_field(wp_unslash($_POST['search'])) : '';
@@ -498,7 +501,17 @@ class Show_Product_Tab_As_Category {
 			$output .= '<p>' . esc_html__('No products found.', 'show-product-tab-as-category') . '</p>';
 		}
 
-		wp_send_json_success($output);
+		wp_send_json_success([
+			'data' => $output,
+			'debug' => [
+				'category' => $category,
+				'search' => $search,
+				'page' => $page,
+				'products_per_page' => $products_per_page,
+				'total_products' => $total_products,
+				'total_pages' => $total_pages,
+			]
+		]);
 	}
 
 	/**

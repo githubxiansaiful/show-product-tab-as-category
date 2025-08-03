@@ -3,7 +3,7 @@ Contributors: developersaiful
 Tags: woocommerce, product tabs, categories, shortcode, e-commerce, hpos
 Requires at least: 5.2
 Tested up to: 6.6
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,11 @@ Yes, the plugin is fully translatable. Translation files can be placed in the `l
 
 == Changelog ==
 
+= 1.6.2 =
+* Fixed AJAX issues with category tabs and search bar not working.
+* Added debugging output for AJAX requests.
+* Added debounced search input to improve performance.
+
 = 1.6.1 =
 * Added compatibility with WooCommerce High-Performance Order Storage (HPOS).
 * Improved pagination logic to use HPOS-compatible product queries.
@@ -93,8 +98,8 @@ Yes, the plugin is fully translatable. Translation files can be placed in the `l
 
 == Upgrade Notice ==
 
-= 1.6.1 =
-This version adds compatibility with WooCommerce High-Performance Order Storage (HPOS) and improves pagination logic. Update to ensure compatibility with modern WooCommerce stores.
+= 1.6.2 =
+This version fixes AJAX issues with category tabs and search bar, adds debugging output, and improves search performance with debouncing. Update to ensure proper functionality.
 
 == License ==
 
