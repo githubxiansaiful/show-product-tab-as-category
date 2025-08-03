@@ -1,0 +1,94 @@
+/**
+ * Admin styles for Show Product Tab as Category plugin.
+ */
+.sptac-admin-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sptac-admin-wrap h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #23282d;
+}
+
+.sptac-admin-wrap .sptac-shortcode-display {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0073aa;
+}
+
+.sptac-admin-wrap .sptac-shortcode-display code {
+    font-size: 14px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.sptac-admin-wrap .form-table th {
+    width: 200px;
+    padding: 15px 10px;
+}
+
+.sptac-admin-wrap .form-table td {
+    padding: 15px 10px;
+}
+
+.sptac-admin-wrap .description {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.sptac-admin-wrap .sptac-category-checkboxes {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.sptac-admin-wrap .sptac-category-checkboxes label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sptac-admin-wrap .sptac-category-checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.sptac-admin-wrap input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.sptac-admin-wrap input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.sptac-admin-wrap .submit {
+    margin-top: 20px;
+}
+
+.sptac-admin-wrap .button-primary {
+    background: #0073aa;
+    border-color: #006799;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.sptac-admin-wrap .button-primary:hover {
+    background: #006799;
+    border-color: #005177;
+}

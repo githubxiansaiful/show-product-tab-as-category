@@ -1,0 +1,95 @@
+/**
+ * Frontend styles for Show Product Tab as Category plugin.
+ */
+.sptac-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sptac-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.sptac-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.sptac-tab.active {
+    border-bottom: 2px solid #0073aa;
+    font-weight: bold;
+}
+
+.sptac-search {
+    margin-bottom: 20px;
+}
+
+.sptac-search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sptac-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.sptac-product {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.sptac-product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sptac-product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.sptac-product .price {
+    color: #0073aa;
+    font-weight: bold;
+}
+
+.sptac-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sptac-pagination .sptac-page {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.sptac-pagination .sptac-page.active {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.sptac-pagination .sptac-page:hover {
+    background: #f1f1f1;
+}
