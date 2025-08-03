@@ -8,6 +8,13 @@
     display: flex;
     justify-content: center;
 }
+@media all and (max-width: 500px) {
+    .sptac-container .sptac-tabs {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 .sptac-tab {
     padding: 5px 20px;
@@ -46,8 +53,23 @@
 
 .sptac-products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+@media all and (max-width: 980px) {
+    .sptac-products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+@media all and (max-width: 500px) {
+    .sptac-products-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 }
 
 .sptac-product {
