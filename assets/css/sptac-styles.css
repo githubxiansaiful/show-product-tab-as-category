@@ -13,7 +13,7 @@
     padding: 5px 20px;
     cursor: pointer;
     margin-right: 5px;
-    border: 2px solid #D1D5DB;
+    border: 2px solid #4B5563;
     color: #4B5563;
     border-radius: 8px;
     font-size: 14px;
@@ -52,26 +52,36 @@
 
 .sptac-product {
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px !important;
+    background: #fff;
 }
 
 .sptac-product img {
     width: 100%;
     height: 200px;
-    object-fit: contain;
+    object-fit: cover;
     background: #f3f4f6;
     display: block;
     transition: transform 0.3s ease;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
 }
 
 .sptac-product h3 {
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding: 0 20px !important;
 }
 
 .sptac-product .price {
-    color: #0073aa;
-    font-weight: bold;
+    color: #2563EB;
+    padding-bottom: 20px !important;
+    display: block !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
 }
 
 .sptac-pagination {
@@ -83,7 +93,7 @@
     display: inline-block;
     padding: 8px 12px;
     margin: 0 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #2563EB;
     border-radius: 4px;
     text-decoration: none;
     color: #2563EB;
@@ -97,6 +107,7 @@
 
 .sptac-pagination .sptac-page:hover {
     background: #f1f1f1;
+    color: #2563EB;
 }
 
 /* Loading spinner styles */
